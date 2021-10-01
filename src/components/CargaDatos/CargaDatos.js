@@ -19,7 +19,7 @@ const CargaDatos = (props) => {
       <input placeholder="Llave de tubo" />
       <span>Precio Unitario: </span>
       <input placeholder="2500" />
-      <span>Precio Unitario: </span>
+      <span>Cantidad: </span>
       <input placeholder="1" />
       <button> Agregar al carrito</button>
     </>
