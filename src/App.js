@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// Este TP está hecho para agrupar a todos los temas que venimos viendo hasta el momento.
+// La idea es generar una factura, en donde el usuario cargue:
+//    Sus datos personales
+//    Las herramientas a comprar, junto con el precio y la cantidad.
 
+// El sistema debe mostrar:
+//    un listado con las herramientas agregadas al carrito.
+//    Un total de la compra
+
+import { useState, useEffect } from "react";
+import "./App.css";
+import { CargaDatos, Titulo } from "./components";
 function App() {
+  // Estados:
+  const [herramienta, setHerramienta] = useState({
+    // Agregar los campos necesarios
+  });
+  const [carrito, setCarrito] = useState([]);
+  // Usar el useEffect para visualizar los cambios de estado
+
+  // Si consideras que debe haber mas estados agregalos aca abajo:
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Titulo />
+      <CargaDatos />
+      {/* 
+        Generá los isguientes componentes:
+        
+        <Listado /> ==> Acá podrás eliminar algún ítem si lo consideras necesario.
+        <Total />   ==> Aca mostrarás el total. En caso de haber eliminado un ítem tendrás que re-hacer el cálculo
+      
+      */}
     </div>
   );
 }
